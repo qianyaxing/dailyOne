@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 18px;
+        }
+
+        section {
+            padding-top: 50px;
+        }
+
+        .container {
+            width: 1100px;
+            margin: 0 auto;
+            /* text-align: center; */
+
+        }
+
+        p {
+            line-height: 30px;
+        }
+
+        .first {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <p class="first">github-对他的第一次亲密接触</p>
+            <p>1.GIT的简介</p>
+            <p>
+                GIT的系统:分布式版本控制系统(分布式版本控制系统的优点：合作开发项目的时候，可以互相看到对方的修改之处);GIT的开发语言：C语言
+            </p>
+            <p>2.GIT安装</p>
+            <p>
+                先下载安装软件，逐步安装，安装完成后，在开始菜单里找到“Git”->“Git Bash”， 蹦出一个类似命令行窗口的东西，就说明Git安装成功，安装完成后，还需要最后一步设置，在命令行输入：
+                $ git config --global user.name "qianyaxing"
+                $ git config --global user.email " 1772909721 @qq.com"
+
+            </p>
+            <p>3.创建版本库</p>
+            <p>
+                选择一个合适的地方，创建一个空目录
+                在命令行输入：
+                $ mkdir learngit
+                在命令行输入：
+                $ cd learngit
+                在命令行输入：
+                $ pwd
+                第二步，通过git init命令把这个目录变成Git可以管理的仓库：$ git init
+
+            </p>
+            <p>4.远程仓库</p>
+            <p>
+                1. 创建SSH Key
+                在命令行输入：
+                2. $ ssh-keygen -t rsa -C "youremail@example.com"
+
+                3. 第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：
+                4. 然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
+
+            </p>
+            <p>5.添加远程库</p>
+            <p>
+                首先，登陆GitHub，然后，在右上角找到“Create a new repo”按钮，创建一个新的仓库：
+                在Repository name填入learngit，其他保持默认设置，点击“Create repository”按钮，就成功地创建了一个新的Git仓库：
+                在命令行输入：
+                $git init 初始化git
+                在命令行输入：
+                $git add . 提交所有文件到暂存区
+                在命令行输入：
+                $git commit –m “xxx”
+                在命令行输入：
+                $git remote add origin git@github.com:qianyaxing/self
+                在命令行输入：
+                $git push –u origin master
+
+            </p>
+            <p>6.从远程库克隆</p>
+            <p>
+                登陆GitHub，创建一个新的仓库，名字叫gitskills
+                远程库已经准备好了，下一步是用命令git clone克隆一个本地库：
+                在命令行输入：
+                $ git clone git@github.com:michaelliao/gitskills.git
+
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>
